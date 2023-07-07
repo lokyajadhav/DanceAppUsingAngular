@@ -1,0 +1,30 @@
+
+<div *ngIf="danceList">
+<table class="table table-striped p-5 mx-auto  shadow-sm p-3  bg-body-tertiary rounded" style="width: 700px">
+   
+    <thead>
+      <tr>
+        <th>dance id</th>
+        <th>dance name</th>
+        <th>dance state</th>
+        <th>Actions</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let room of danceList">
+            <td>{{room.id }}</td>
+            <td>{{room.name }}</td>
+    
+    
+            <td>{{room.state_of_origin }}</td>
+            <td><button class="btn btn-danger" (click)="deleteObjectById(room.id)">Delete</button></td>
+            <td><button class="btn btn-primary">update</button></td>
+            
+    
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+   <div *ngIf="danceList== null"> data not found</div>

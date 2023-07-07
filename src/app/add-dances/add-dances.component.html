@@ -1,0 +1,38 @@
+<div class="alert alert-success">
+    {{message}}
+</div>
+<h1 class="text-primary text-center mt-5">Dance registration form</h1>
+<!-- <form (ngSubmit)="addDance()" class="mx-auto p-5 mx-auto mt-5 shadow-sm p-3 mb-5 bg-body-tertiary rounded" style="width: 600px">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Dance Id</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="id" aria-describedby="emailHelp" [(ngModel)]="dance.id">
+     
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Dance Name</label>
+      <input type="text" name="name" class="form-control" id="exampleInputPassword1" [(ngModel)]="dance.name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Dance State</label>
+      <input type="text" name="state" class="form-control" id="exampleInputPassword1" [(ngModel)]="dance.state" >
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> -->
+  <form (ngSubmit)="addDance()" class="mx-auto p-5 mx-auto mt-5 shadow-sm p-3 mb-5 bg-body-tertiary rounded" style="width: 600px" >
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Dance Id</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="id" aria-describedby="emailHelp" [(ngModel)]="dance.id">
+     
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Dance Name</label>
+      <input type="text" name="name" class="form-control" id="exampleInputPassword1" [(ngModel)]="dance.name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Dance State</label>
+      <input type="text" name="state" class="form-control" id="exampleInputPassword1" [(ngModel)]="dance.state_of_origin" >
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
