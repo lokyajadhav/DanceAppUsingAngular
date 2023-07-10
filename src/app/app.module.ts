@@ -16,18 +16,20 @@ import { AddDancesComponent } from './add-dances/add-dances.component';
 import { UpdateDanceComponent } from './update-dance/update-dance.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { DanceModule } from './dance.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     DanceNavigationComponent,
     HomeComponent,
-    GetDancesComponent,
-    AddDancesComponent,
-    UpdateDanceComponent
+    UpdateDanceComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    DanceModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,

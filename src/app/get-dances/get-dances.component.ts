@@ -25,5 +25,9 @@ export class GetDancesComponent implements OnInit {
       console.log(data)
     })
   }
+  updateObjectById(danceid: number)
+  {
+      
+  }
   
 }

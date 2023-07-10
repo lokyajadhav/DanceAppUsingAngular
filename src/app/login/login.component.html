@@ -1,0 +1,15 @@
+<h1 class="pt-5 text-center text-primary " > Admin Login</h1>
+  <form #loginForm="ngForm" (submit)="login(loginForm)" class="mx-auto p-5 mx-auto mt-5 shadow-sm p-3 mb-5 bg-body-tertiary rounded" style="width: 550px">
+  <div class="mb-3">
+    <label  class="form-label">User Name</label>
+    <input type="text" class="form-control" name="userName" aria-describedby="emailHelp" required minlength="8" #loginUserName="ngModel" [(ngModel)]="data.username">
+   <div class="alert alert-danger " *ngIf=" loginUserName.errors?.['minlength']">minimum 8 characters required!</div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" required #loginPassword="ngModel" [(ngModel)]="data.password">
+    <div class="alert alert-danger" *ngIf="loginPassword.dirty && loginPassword.errors?.['required']">required</div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+</form>

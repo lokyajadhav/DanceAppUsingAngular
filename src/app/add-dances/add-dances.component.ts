@@ -1,6 +1,8 @@
 import { Component,OnInit} from '@angular/core';
 import { Dance } from '../Models/Dance';
 import { DanceServiceService } from '../dance-service.service';
+import { NgFor } from '@angular/common';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-dances',
@@ -21,10 +23,15 @@ export class AddDancesComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  addDance()
+  addDance(roomsForm:NgForm)
   {
-   this.danceService.addDance(this.dance).subscribe((data)=> this.message='dance added successfully')
-    console.log(this.dance);
+   this.danceService.addDance(this.dance).subscribe((data)=> {
+    this.message='dance added successfully';
+    roomsForm.reset();
+   })
+
+
+    //console.log(this.dance);
   }
 }
 

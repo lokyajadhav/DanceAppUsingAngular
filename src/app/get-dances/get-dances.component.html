@@ -19,7 +19,7 @@
     
             <td>{{room.state_of_origin }}</td>
             <td><button class="btn btn-danger" (click)="deleteObjectById(room.id)">Delete</button></td>
-            <td><button class="btn btn-primary">update</button></td>
+            <td><button class="btn btn-primary" routerLink="[  room.id]">update</button></td>
             
     
         </tr>
@@ -28,3 +28,5 @@
 </div>
 
    <div *ngIf="danceList== null"> data not found</div>
+
+   <router-outlet></router-outlet>

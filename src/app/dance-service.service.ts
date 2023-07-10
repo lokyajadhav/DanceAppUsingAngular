@@ -18,6 +18,6 @@ export class DanceServiceService {
   }
   deleteDances(id:number)
   {
-    return this.http.delete("http://localhost:8083/deleteDance",);
+    return this.http.delete(`http://localhost:8083/deleteDance/${id}`);
   }
 }
